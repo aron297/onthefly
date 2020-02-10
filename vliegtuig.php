@@ -8,7 +8,7 @@
 <body>
     <ul>
         <br>
-    <li><a href="index.php" class="active">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="vliegtuigen.php">Vliegtuigen</a></li>
     <li><a href="planning.php">Planning</a></li>
 </ul>
@@ -23,7 +23,9 @@
       $connect = new PDO("mysql:host=$host; dbname=$database", $username, $password);  
       $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
      
-      $sql= "SELECT vliegtuignummer, type, vliegtuigmaatschappij, status FROM vliegtuigen";
+     $vliegtuignummer = $_GET['vliegtuignummer'];
+     
+      $sql= "SELECT vliegtuignummer, welk_vliegtuig, datum_vertrek, datum_retour, bestemming, status FROM planning where vliegtuignummer =$vliegtuignummer";
                 $statement = $connect->prepare($sql);  
                 $statement->execute();
      $results=$statement->fetchAll();
@@ -32,12 +34,12 @@
     <div class="fotooo">
          <table class="vliegtuig"><td>
              <fieldset class="vliegtuigov">
-                 <legend>Vliegtuigen</legend>
+                 <legend>Vluchten</legend>
          
-         <p><a href="vliegtuig.php?vliegtuignummer=<?php  echo $output["vliegtuignummer"]?>">
+         <p><a href="index.php">
         
-    <img class="fotos" src="fotos/vliegtuig.jpg"><br><br><br><br><br><br>
-             </a></p><p class="text"><?php  echo "Vliegtuignummer: " . $output["vliegtuignummer"] . "<br>Type: ". $output["type"]. "<br>Vliegmaatschappij: " . $output["vliegtuigmaatschappij"]. "<br>Status: " . $output["status"];   ?></p></fieldset></td><?php
+    <img class="fotos" src="fotos/planning.jpg"><br><br><br><br><br><br>
+             </a></p><p class="text"><?php  echo "Vliegtuignummer: " . $output["vliegtuignummer"] . "<br>Welk vliegtuig: ". $output["welk_vliegtuig"]. "<br>Datum vertrek: " . $output["datum_vertrek"]. "<br>Datum retour: " . $output["datum_retour"]. "<br>Bestemming: " . $output["bestemming"]. "<br>Status: " . $output["status"];   ?></p></fieldset></td><?php
     }
      ?></table></div><?php
  }  
@@ -48,7 +50,7 @@
  ?>
     
     <div class="inhoud">
-    <h1 class="home">ON THE FLY</h1>
+    <h1 class="home">Vluchten met dit vliegtuig</h1>
     </div>
     <?php  
         if(isset($message))  

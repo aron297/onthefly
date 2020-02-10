@@ -1,5 +1,160 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+html{
+    font-family: sans-serif;
+    background-color: #d1c7c0;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0%;
+    left 0%;
+    transform: translate(-0%, -0%);
+    height: 100%;
+    width: 14%;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #d2d4f8;
+  color: black;
+}
+
+.active {
+  background-color: rgb(170, 160, 146);
+  color: white;
+}
+
+.inhoud{
+    margin-left: 20%;
+    color: black;
+}
+
+.home{
+    font-size: 50px;
+    position: absolute;
+    margin-top: 0%;
+    top:  0%;
+    left: 20%;
+    transform: translate(-0%, -0%)
+}
+
+form{
+    width: 600px;
+    height: 80%;
+    position: absolute;
+    margin-top: 0%;
+    top:  17%;
+    left: 20%;
+    transform: translate(-0%, -0%)
+    
+}
+
+.textinvoer{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    margin-bottom: 0%;
+    
+}
+
+.button{
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    width: 600px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: rgb(170, 160, 146);
+    color: white;
+}
+
+.button:hover{
+    background-color: #d2d4f8;
+    cursor: pointer;
+    color: black;
+    
+}
+
+.message{
+   font-size: 20px; 
+position: absolute;
+    margin-top: 0%;
+    top:  12%;
+    left: 20%;
+    transform: translate(-0%, -0%)
+}
+
+table{
+    float: left;
+    margin-left: 0%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    display: inline-block;
+    
+   
+}
+
+img{
+    float: left;
+    display: flex;
+    width: 200px;
+    margin: 5px;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+
+}
+
+img:hover{
+    opacity: 0.7
+
+}
+
+.text{
+    float: left;
+    display: flex;
+    width: 200px;
+    margin: 5px;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+    text-align: left;
+    margin-bottom: 3%
+}
+
+.fotooo{
+    float: left;
+    display: inline-block;
+    position: absolute;
+    margin-right: 5%;
+    margin-left: 0%;
+    top: 17%;
+    left: 20%;
+    transform: translate(-0%, -0%);
+    width: 70%
+}
+
+.vliegtuigov{
+    height: 300px
+}
+
